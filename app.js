@@ -20,7 +20,7 @@ app.listen(PORT,()=>{
     const url = await ngrok.connect({
         proto:'http',
         addr:PORT,
-        authtoken:'2ItcO1pxPHwKl81EJuLodWGgOVi_5sd5GCq3BQbR1a2jJuFr3'
+        authtoken:process.env.NGROK_AUTH_TOKEN
     });
     console.log(url);
 })();
